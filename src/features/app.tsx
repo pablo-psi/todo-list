@@ -4,9 +4,9 @@ import Column from './common/column'
 
 const App = () => (
 	<Layout>
-		<Column title={'TODO'} />
-		<Column title={'Doing'} />
-		<Column title={'Done'} />
+		<Column title={'TODO'} list={['First task', 'Second task']} />
+		<Column title={'Doing'} list={['Doing task']} />
+		<Column title={'Done'} list={[]} />
 	</Layout>
 )
 
