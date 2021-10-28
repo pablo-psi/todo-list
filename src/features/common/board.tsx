@@ -17,13 +17,13 @@ const StyledBoard = styled.div`
 `
 
 interface BoardProps {
-    list: Array<string>,
+    list: Array<any>,
 }
 
 export const Board: React.FC<BoardProps> = (props) => (
 	<StyledBoard>
-		{props.list.map((item, i) => 
-			<BoardItem key={i} text={item}/>
+		{props.list.map((item) => 
+			<BoardItem key={item.id} text={item.title}/>
 		)}
 	</StyledBoard>
 )

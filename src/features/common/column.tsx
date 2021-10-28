@@ -13,7 +13,7 @@ const StyledColumn = styled.div`
 `
 interface ColumnProps {
     title?: string,
-    list: Array<string>,
+    list: Array<any>,
 }
 
 export const Column: React.FC<ColumnProps> = (props) => (
