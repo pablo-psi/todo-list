@@ -16,12 +16,9 @@ interface ColumnProps {
     list: Array<string>,
 }
 
-export const Column = (props: ColumnProps) => (
+export const Column: React.FC<ColumnProps> = (props) => (
 	<StyledColumn>
 		<span>{props.title}</span>
 		<Board list={props.list}/>
 	</StyledColumn>
 )
-
-
-export default Column

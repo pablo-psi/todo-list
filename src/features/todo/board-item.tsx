@@ -10,7 +10,7 @@ interface BoardItemProps {
     text: string,
 }
 
-export const BoardItem = (props: BoardItemProps) => {
+export const BoardItem: React.FC<BoardItemProps> = (props) => {
 	return (
 		<StyledBoardItem>
 			<span>{props.text}</span>

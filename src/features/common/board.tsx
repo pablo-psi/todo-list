@@ -20,7 +20,7 @@ interface BoardProps {
     list: Array<string>,
 }
 
-export const Board = (props: BoardProps) => (
+export const Board: React.FC<BoardProps> = (props) => (
 	<StyledBoard>
 		{props.list.map((item, i) => 
 			<BoardItem key={i} text={item}/>
