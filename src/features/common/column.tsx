@@ -25,10 +25,10 @@ interface ColumnProps {
 }
 
 export const Column = (props: ColumnProps) => (
-    <StyledColumn>
-        <span>{props.title}</span>
-        <Board />
-    </StyledColumn>
+	<StyledColumn>
+		<span>{props.title}</span>
+		<Board />
+	</StyledColumn>
 )
 
 
