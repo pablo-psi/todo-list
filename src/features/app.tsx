@@ -1,10 +1,9 @@
 import React, {useEffect, useState} from 'react'
-import {
-	useQuery
-} from '@apollo/client'
-import {GET_TODOS} from '../api/queries'
-import Layout from './layout.ui'
-import { Column } from './common/column'
+import { useQuery } from '@apollo/client'
+import {GET_TODOS} from 'api/queries'
+import Layout from 'features/layout.ui'
+import { Column } from 'features/common/column'
+import { TodoListItem } from 'api/entities'
 
 const App: React.FC = () => {
 	
@@ -16,9 +15,8 @@ const App: React.FC = () => {
 	useEffect(() => {
 		if (!loading && !error && data) {
 			const allData = data.todos.data
-			setTodoItems(allData.filter((item: any) => !item.completed))
-			setDoneItems(allData.filter((item: any) => item.completed))
-
+			setTodoItems(allData.filter((item: TodoListItem) => !item.completed))
+			setDoneItems(allData.filter((item: TodoListItem) => item.completed))
 		}
 	}, [loading, error, data])
 	

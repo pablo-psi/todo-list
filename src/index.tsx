@@ -1,6 +1,6 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
-import App from './features/app'
+import App from 'features/app'
 import './index.css'
 import {
 	ApolloClient,
