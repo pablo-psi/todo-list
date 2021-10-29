@@ -19,13 +19,13 @@ const StyledBoard = styled.div`
 	}
 `
 
-interface BoardProps {
-  list: Array<TodoListItem>,
+type BoardProps = {
+  list: TodoListItem[],
 }
 
-export const Board: React.FC<BoardProps> = (props) => (
+export const Board = ({list}: BoardProps): JSX.Element => (
 	<StyledBoard>
-		{props.list.map((item) => 
+		{list.map((item) => 
 			<BoardItem key={item.id} text={item.title}/>
 		)}
 	</StyledBoard>

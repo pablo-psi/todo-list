@@ -12,14 +12,15 @@ const StyledColumn = styled.div`
 			text-align: center;
 	}
 `
-interface ColumnProps {
+
+type ColumnProps = {
   title?: string,
-  list: Array<TodoListItem>,
+  list: TodoListItem[],
 }
 
-export const Column: React.FC<ColumnProps> = (props) => (
+export const Column = ({title, list}: ColumnProps): JSX.Element => (
 	<StyledColumn>
-		<span>{props.title}</span>
-		<Board list={props.list}/>
+		<span>{title}</span>
+		<Board list={list}/>
 	</StyledColumn>
 )

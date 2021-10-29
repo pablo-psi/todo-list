@@ -5,7 +5,7 @@ import Layout from 'features/layout.ui'
 import { Column } from 'features/common/column'
 import { TodoListItem } from 'api/entities'
 
-const App: React.FC = () => {
+const App = (): JSX.Element => {
 	
 	const { loading, error, data } = useQuery(GET_TODOS)
 	

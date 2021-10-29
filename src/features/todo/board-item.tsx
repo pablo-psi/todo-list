@@ -6,14 +6,14 @@ const StyledBoardItem = styled.div`
     box-shadow: #56565654 3px 3px 6px 0px;
 `
 
-interface BoardItemProps {
+type BoardItemProps = {
     text: string,
 }
 
-export const BoardItem: React.FC<BoardItemProps> = (props) => {
+export const BoardItem  = ({text}: BoardItemProps): JSX.Element => {
 	return (
 		<StyledBoardItem>
-			<span>{props.text}</span>
+			<span>{text}</span>
 		</StyledBoardItem>
 	)
 }
