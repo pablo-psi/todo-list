@@ -14,7 +14,7 @@ const App = (): JSX.Element => {
 	
 	useEffect(() => {
 		if (!loading && !error && data) {
-			const allData = data.todos.data
+			const allData = data.todos
 			setTodoItems(allData.filter((item: TodoListItem) => !item.completed))
 			setDoneItems(allData.filter((item: TodoListItem) => item.completed))
 		}
