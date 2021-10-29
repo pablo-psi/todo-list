@@ -11,6 +11,8 @@ const StyledBoard = styled.div`
 	flex: 1;
 	margin: 8px;
 	padding: 24px;
+	max-height: 100%;
+	overflow-y: scroll;
 
 	div + div {
 			margin-top: 8px;
